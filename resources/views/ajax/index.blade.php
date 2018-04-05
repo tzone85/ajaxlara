@@ -8,7 +8,7 @@
                     <div class="panel-heading">
 
                         Dashboard
-                    <button class="btn btn-info pull-right btn-xs">Load Data By Ajax</button>
+                    <button id="read-data" class="btn btn-info pull-right btn-xs">Load Data By Ajax</button>
 
                     </div>
 
@@ -35,5 +35,10 @@
 
 
 @section('script')
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+        $('#read-data').on('click', function(){
+           alert('test code');
+        });
+
+    </script>
 @endsection
