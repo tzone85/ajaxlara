@@ -36,8 +36,12 @@
 
 @section('script')
     <script type="text/javascript">
-        $('#read-data').on('click', function(){
-           alert('test code');
+//        $('#read-data').on('click', function(){
+//           alert('test code');
+//        });
+
+        $.get("{{ URL::to('students/read-data') }}", function(data){
+            console.log('data')
         });
 
     </script>

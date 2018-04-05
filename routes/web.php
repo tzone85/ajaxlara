@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 Route::get('students', 'AjaxController@index');
 
+Route::get('/students/read-data', 'AjaxController@readData');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

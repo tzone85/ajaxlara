@@ -20,7 +20,15 @@ class AjaxController extends Controller
     }
 
     public function readData(){
+        $students = Student::join('sexes', 'sexes.id', '=', 'students.sex_id')
+            ->selectRaw('sexes.sex,
+                        students.first_name,
+                        students.last_name,
+                        CONCAT(student.first_name," ", students.last_name) AS full_name,
+                        student.id')
+            ->get();
 
+        return response($students);
     }
 
     /**
