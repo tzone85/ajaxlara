@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Student;
-use App\Sex;
-
-class AjaxController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +13,7 @@ class AjaxController extends Controller
      */
     public function index()
     {
-        return view('ajax.index');
-    }
-
-    public function readData(){
-
+        //
     }
 
     /**
